@@ -57,7 +57,7 @@ export default {
 
       if (!token) {
         alert('Please log in to view your cart.');
-        this.$router.push('/login'); // Redirect to login if no token
+        this.$router.push('/signin'); // Redirect to login if no token
         return;
       }
 
@@ -78,7 +78,7 @@ export default {
 
       if (!token) {
         alert('Please log in to remove items from your cart.');
-        this.$router.push('/login'); // Redirect to login if no token
+        this.$router.push('/signin'); // Redirect to login if no token
         return;
       }
 

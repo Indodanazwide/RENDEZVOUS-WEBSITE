@@ -63,7 +63,7 @@ export default {
 
         if (!token) {
             alert('Please log in to add items to your cart.');
-            this.$router.push('/login'); // Redirect to login if no token
+            this.$router.push('/signin'); // Redirect to login if no token
             return;
         }
 
@@ -87,7 +87,7 @@ export default {
             console.error('Error adding item to cart:', error);
             if (error.response && error.response.status === 401) {
                 alert('Session expired. Please log in again.');
-                this.$router.push('/login'); // Redirect to login if unauthorized
+                this.$router.push('/signin'); // Redirect to login if unauthorized
             } else {
                 alert('Failed to add item to cart. Please try again later.');
             }
