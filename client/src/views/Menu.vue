@@ -14,7 +14,7 @@
 
     <section class="menu-container">
       <article v-for="item in filteredMenuItems" :key="item.menu_item_id" class="menu-item">
-        <img :src="`/images/menu/${item.menu_item_image}`" :alt="item.menu_item_name" class="menu-item-image"/>
+        <img :src="`images/menu/${item.menu_item_image}`" :alt="item.menu_item_name" class="menu-item-image"/>
         <h3>{{ item.menu_item_name }}</h3>
         <p>Price: R{{ item.menu_item_price }}</p>
         <button @click="addToCart(item)">Add to Cart</button>

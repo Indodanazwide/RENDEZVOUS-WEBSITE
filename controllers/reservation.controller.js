@@ -21,6 +21,7 @@ export const createReservation = async (req, res) => {
              VALUES (?, ?, ?, ?, ?)`, 
             [name, email, date, guests, specialRequest] // Use updated variable names here
         );
+
         res.status(201).json({ message: 'Reservation created successfully' });
     } catch (error) {
         console.error('Error creating reservation:', error);
